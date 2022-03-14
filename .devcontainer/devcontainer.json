@@ -1,0 +1,42 @@
+{
+	"name": "Docker from Docker Compose",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/home/${localEnv:USER}/deeplab-custom-dataset/src",
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"bash (login)": {
+			  "path": "bash",
+			  "args": ["-l"]
+			}
+		},
+		"[python]": {
+			"editor.formatOnSave": false,
+			"editor.tabSize": 2, 
+		},
+		"python.pythonPath": "/usr/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.formatting.autopep8Path": "/home/${localEnv:USER}/.local/bin/autopep8",
+		"python.formatting.autopep8Args": [
+			"--indent-size=2",
+		],
+		"python.formatting.yapfPath": "/home/${localEnv:USER}/.local/bin/yapf",
+		"python.linting.banditPath": "/home/${localEnv:USER}/.local/bin/bandit",
+		"python.linting.flake8Path": "/home/${localEnv:USER}/.local/bin/flake8",
+		"python.linting.mypyPath": "/home/${localEnv:USER}/.local/bin/mypy",
+		"python.linting.pycodestylePath": "/home/${localEnv:USER}/.local/bin/pycodestyle",
+		"python.linting.pydocstylePath": "/home/${localEnv:USER}/.local/bin/pydocstyle",
+		"python.linting.pylintPath": "/home/${localEnv:USER}/.local/bin/pylint",
+		"jupyter.alwaysTrustNotebooks": true,
+	},
+	"extensions": [
+		"ms-python.python",
+		"ms-toolsai.jupyter",
+		"ms-python.vscode-pylance"
+	],
+	"remoteEnv": {
+		"USER": "${localEnv:USER}"
+	},
+	"remoteUser": "${localEnv:USER}"
+}
